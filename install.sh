@@ -33,6 +33,11 @@ chmod 644 /etc/php/7.2/fpm/pool.d/www.conf
 systemctl restart nginx
 systemctl restart mysql
 
+# Start service on boot
+systemctl enable php7.2-fpm
+systemctl enable nginx
+systemctl enable mysql
+
 # Setup database
 mysql -e "create database fakenews"
 mysql -e 'create user "faker"@"localhost" IDENTIFIED BY "S3a0#d9$yj"'
