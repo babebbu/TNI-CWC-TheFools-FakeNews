@@ -22,7 +22,7 @@ chmod 777 /var/www/html/batch_process_service_status.sh
 
 # Set (Ensure) owner and permission for system files
 chmod 644 /etc/nginx/sites-available/default
-chmod 644 /etc/mysql/conf.d/mysql.conf
+chmod 644 /etc/mysql/conf.d/mysql.cnf
 chmod 644 /etc/php/7.2/fpm/pool.d/www.conf
 
 # Restart services
