@@ -6,6 +6,10 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+# Set Hostname
+hostnamectl set-hostname the-fools
+sed -i "s/127.0.1.1/127.0.1.1 the-fools/" /etc/hosts
+
 # Install Packages (Nginx, MySQL, PHP-FPM)
 apt install -y nginx mysql-server php-fpm php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
 
