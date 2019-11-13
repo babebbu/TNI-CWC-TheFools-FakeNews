@@ -156,7 +156,8 @@
         <a class="btn btn-outline-primary" href="#">Older</a>
         <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
         <form action="index.php" method="get" id="sort">
-          <select class="form-control" name="sort" onselect="document.getElementById('sort').submit()">
+          <select class="form-control" name="sort" onchange="document.getElementById('sort').submit()">
+            <option>Order By</option>
             <option value="ASC">Older > Newer</option>
             <option value="DESC">Newer > Older</option>
           </select>
