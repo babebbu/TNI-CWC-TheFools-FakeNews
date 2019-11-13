@@ -126,12 +126,12 @@
         ข่าวปอมล่าสุด
       </h3>
 
-    <?php
-        $sql = "SELECT * FROM news ORDER BY id ASC;";
+      <?php
+        $sql = "SELECT * FROM news ORDER BY id ASC";
         $news = $conn->query($sql);
-	if(count($news) > 0):
-            while($article = $news->fetch_assoc()):
-    ?>
+	      if(count($news) > 0):
+          while($article = $news->fetch_assoc()):
+      ?>
 
       <div class="blog-post">
         <h2 class="blog-post-title"><?=$article['title']?></h2>
@@ -140,10 +140,10 @@
         <p><?php echo htmlspecialchars_decode($article['content']); ?></p>
       </div><!-- /.blog-post -->
 
-    <?php
-	    endwhile;
-	endif;
-    ?>
+      <?php
+          endwhile;
+        endif;
+      ?>
 
       <nav class="blog-pagination">
         <a class="btn btn-outline-primary" href="#">Older</a>
