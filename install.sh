@@ -10,6 +10,9 @@ fi
 hostnamectl set-hostname the-fools
 sed -i "s/127.0.1.1/127.0.1.1 the-fools/" /etc/hosts
 
+# Configure APT repository
+apt update
+
 # Install Packages (Nginx, MySQL, PHP-FPM)
 apt install -y nginx mysql-server php-fpm php-mbstring php-xmlrpc php-soap php-gd php-xml php-intl php-mysql php-cli php-ldap php-zip php-curl
 
