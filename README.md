@@ -16,3 +16,9 @@ git clone https://github.com/codesonteen/TNI-CWC-TheFools-FakeNews
 cd TNI-CWC-TheFools-FakeNews
 sudo bash install.sh
 ```
+
+## Default Web Login
+```
+username: admin
+password: password
+```
