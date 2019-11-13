@@ -44,5 +44,8 @@ mysql -e 'create user "faker"@"localhost" IDENTIFIED BY "S3a0#d9$yj"'
 mysql -e 'GRANT SELECT, INSERT ON fakenews.* TO "faker"@"localhost"'
 mysql fakenews < imports/fakenews.sql
 
+# Set password for user 'admin'
+mysql -e 'UPDATE users SET password = "$2y$10$xzN6Qng83Wqdr.rlFR6GKOGVzqhBUigo7Ay3neNfydKUJUP/.IVAW" WHERE username = "admin"'
+
 # Setup Cron
 crontab imports/cronjobs
