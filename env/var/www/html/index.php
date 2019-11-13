@@ -135,9 +135,9 @@
 
       <div class="blog-post">
         <h2 class="blog-post-title"><?=$article['title']?></h2>
-        <p class="blog-post-meta"><small><?php echo $article['timestamp']; ?></small></p>
+        <p class="blog-post-meta"><small><?=$article['timestamp'];?></small></p>
 
-        <p><?php echo htmlspecialchars_decode($article['content']); ?></p>
+        <p><?=htmlspecialchars_decode($article['content']);?></p>
       </div><!-- /.blog-post -->
 
       <?php
@@ -148,6 +148,12 @@
       <nav class="blog-pagination">
         <a class="btn btn-outline-primary" href="#">Older</a>
         <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+        <form action="index.php" method="get">
+          <select class="form-control" name="sort">
+            <option value="ASC">Older > Newer</option>
+            <option value="DESC">Newer > Older</option>
+          </select>
+        </form>
       </nav>
 
     </div><!-- /.blog-main -->
