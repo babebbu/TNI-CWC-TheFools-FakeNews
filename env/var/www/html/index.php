@@ -127,7 +127,14 @@
       </h3>
 
       <?php
-        $sql = "SELECT * FROM news ORDER BY id ASC";
+
+        $sort = "ASC";
+
+        if(isset($_GET['sort'])) {
+          $sort = $_GET['sort'];
+        }
+
+        $sql = "SELECT * FROM news ORDER BY id $sort";
         $news = $conn->query($sql);
 	      if(count($news) > 0):
           while($article = $news->fetch_assoc()):
