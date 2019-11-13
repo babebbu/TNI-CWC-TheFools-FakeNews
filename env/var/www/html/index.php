@@ -155,8 +155,8 @@
       <nav class="blog-pagination">
         <a class="btn btn-outline-primary" href="#">Older</a>
         <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-        <form action="index.php" method="get">
-          <select class="form-control" name="sort">
+        <form action="index.php" method="get" id="sort">
+          <select class="form-control" name="sort" onselect="document.getElementById('sort').submit()">
             <option value="ASC">Older > Newer</option>
             <option value="DESC">Newer > Older</option>
           </select>
