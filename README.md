@@ -23,5 +23,5 @@ sudo bash install.sh
 ## Default Web Login
 ```
 username: admin
-password: password
+password: N00b555+
 ```
