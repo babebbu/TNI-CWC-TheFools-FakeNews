@@ -3,7 +3,7 @@ This lab has a bunch of vulnerabilities which includes
 - SQL Injection
 - XSS (Cross-Site Scripting)
 - Insecure File Uploads
-- Privilege Escalation
+- Privilege Escalation (via cron and file permission)
 
 ## Requirements
 - Ubuntu 18.04 LTS (Bionic Beaver)
